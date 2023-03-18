@@ -26,8 +26,8 @@ return require('packer').startup(function(use)
   }
 
   use({
-	'rose-pine/neovim', as = "rose-pine" , config = function() 
-		vim.cmd('colorscheme rose-pine')
+	'bluz71/vim-moonfly-colors', as = "moonfly" , config = function() 
+		vim.cmd('colorscheme moonfly')
 	end
   })
   
