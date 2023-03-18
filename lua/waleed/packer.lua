@@ -36,6 +36,15 @@ return require('packer').startup(function(use)
   use("nvim-tree/nvim-web-devicons")
 
   use('nvim-treesitter/nvim-treesitter', { run =  ':TSUpdate'})
+  
+  use('nvim-lualine/lualine.nvim')
+
+  use {
+  'lewis6991/gitsigns.nvim',
+  config = function()
+    require('gitsigns').setup()
+  end
+}
 
   use {
 	  'VonHeikemen/lsp-zero.nvim',
