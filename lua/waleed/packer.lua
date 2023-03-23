@@ -74,4 +74,11 @@ return require('packer').startup(function(use)
 	"windwp/nvim-autopairs",
     config = function() require("nvim-autopairs").setup {} end
   }
+  use("windwp/nvim-ts-autotag")
+  use {
+    'numToStr/Comment.nvim',
+    config = function()
+        require('Comment').setup()
+    end
+}
 end)

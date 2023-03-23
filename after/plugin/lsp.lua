@@ -1,5 +1,5 @@
 local lsp = require("lsp-zero")
-
+local lsp_config = require('lspconfig')
 lsp.preset("recommended")
 
 lsp.ensure_installed({
@@ -44,6 +44,24 @@ lsp.set_preferences({
     }
 })
 
+lsp_config.intelephense.setup({
+  settings = {
+    intelephense = {
+      stubs = {
+         "wordpress",
+                "woocommerce",
+                "acf-pro",
+                "wordpress-globals",
+                "wp-cli"
+      },
+      
+         files = {
+                maxSize = 5000000;
+            }
+      
+    }
+  }
+})
 
 lsp.setup()
 
