@@ -81,5 +81,6 @@ return require('packer').startup(function(use)
     config = function()
         require('Comment').setup()
     end
-}
+  }
+  use {'romgrk/barbar.nvim', requires = 'nvim-web-devicons'}
 end)
