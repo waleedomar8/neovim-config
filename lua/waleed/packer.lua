@@ -83,4 +83,5 @@ return require('packer').startup(function(use)
     end
   }
   use {'romgrk/barbar.nvim', requires = 'nvim-web-devicons'}
+  use("xiyaowong/transparent.nvim")
 end)
