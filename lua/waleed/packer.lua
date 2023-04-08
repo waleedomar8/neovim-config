@@ -25,12 +25,20 @@ return require('packer').startup(function(use)
 	  requires = { {'nvim-lua/plenary.nvim'} }
   }
 
-  use({
-	'bluz71/vim-moonfly-colors', as = "moonfly" , config = function() 
-		vim.cmd('colorscheme moonfly')
-	end
-  })
+  use('bluz71/vim-moonfly-colors')
+
+  use('haishanh/night-owl.vim')
   
+  use('Mofiqul/vscode.nvim')
+
+  use("Alexis12119/nightly.nvim")
+
+  use("pineapplegiant/spaceduck")
+
+  use("ayu-theme/ayu-vim")
+  
+  use('agude/vim-eldar')
+
   use("nvim-tree/nvim-tree.lua")
   
   use("nvim-tree/nvim-web-devicons")
