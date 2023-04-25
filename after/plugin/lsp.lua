@@ -48,6 +48,14 @@ lsp.set_preferences({
 lsp.setup()
 
 vim.diagnostic.config({
-    virtual_text = true
+  virtual_text = true, 
+  wrap = true, 
+  severity_sort = true,
+  float = {
+    source = "always",  -- Or "if_many"
+    wrap = true,
+    width = 300
+  },
 })
+vim.cmd [[autocmd CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=false})]]
 

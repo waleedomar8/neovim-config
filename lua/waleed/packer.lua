@@ -92,4 +92,15 @@ return require('packer').startup(function(use)
   }
   use {'romgrk/barbar.nvim', requires = 'nvim-web-devicons'}
   use("xiyaowong/transparent.nvim")
+  use {
+  "folke/trouble.nvim",
+  requires = "nvim-tree/nvim-web-devicons",
+  config = function()
+    require("trouble").setup {
+        position = "botton", 
+        icons = true, 
+         use_diagnostic_signs = true
+    }
+  end
+}
 end)
