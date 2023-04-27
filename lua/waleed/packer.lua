@@ -92,6 +92,7 @@ return require('packer').startup(function(use)
   }
   use {'romgrk/barbar.nvim', requires = 'nvim-web-devicons'}
   use("xiyaowong/transparent.nvim")
+  use('aca/emmet-ls')
   use {
   "folke/trouble.nvim",
   requires = "nvim-tree/nvim-web-devicons",
