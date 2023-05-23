@@ -6,7 +6,7 @@ capabilities.textDocument.completion.completionItem.snippetSupport = true
 lspconfig.emmet_ls.setup({
     -- on_attach = on_attach,
     capabilities = capabilities,
-    filetypes = { "css", "html", "javascript", "javascriptreact", "less", "sass", "scss",  "typescriptreact", "vue" },
+    filetypes = { "css", "html", "javascript", "javascriptreact", "less", "sass", "scss" },
     init_options = {
       html = {
         options = {
