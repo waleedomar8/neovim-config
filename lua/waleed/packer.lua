@@ -33,6 +33,12 @@ return require('packer').startup(function(use)
 
   use("Alexis12119/nightly.nvim")
 
+  use("projekt0n/github-nvim-theme");
+
+  use("rebelot/kanagawa.nvim");
+
+  use("fenetikm/falcon");
+
   use("pineapplegiant/spaceduck")
 
   use("ayu-theme/ayu-vim")

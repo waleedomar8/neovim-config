@@ -8,4 +8,4 @@ vim.opt.tabstop = 2
 vim.opt.shiftwidth = 2
 vim.opt.expandtab = true
 vim.opt.autoindent = true
-vim.cmd [[colorscheme night-owl]]
+vim.cmd [[colorscheme github_dark_default]]
