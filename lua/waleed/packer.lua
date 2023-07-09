@@ -102,8 +102,7 @@ return require('packer').startup(function(use)
   use {
     'akinsho/flutter-tools.nvim',
     requires = {
-        'nvim-lua/plenary.nvim',
-        'stevearc/dressing.nvim', -- optional for vim.ui.select
+        'nvim-lua/plenary.nvim'
     },
 }
   use {
