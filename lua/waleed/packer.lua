@@ -19,8 +19,6 @@ return require('packer').startup(function(use)
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
 
-  use 'othree/html5.vim'
-
   use {
 	  'nvim-telescope/telescope.nvim', tag = '0.1.1',
 	  -- or                            , branch = '0.1.x',
@@ -98,7 +96,6 @@ return require('packer').startup(function(use)
         require('Comment').setup()
     end
   }
-  use('github/copilot.vim')
   use {'romgrk/barbar.nvim', requires = 'nvim-web-devicons'}
   use("xiyaowong/transparent.nvim")
   use('aca/emmet-ls')
