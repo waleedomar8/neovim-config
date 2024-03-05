@@ -1,5 +1,7 @@
 local lsp = require("lsp-zero")
 local lsp_config = require('lspconfig')
+
+
 lsp.preset("recommended")
 
 lsp.ensure_installed({
@@ -16,7 +18,13 @@ lsp.configure('lua-language-server', {
         }
     }
 })
-
+require'lspconfig'.intelephense.setup{
+  cmd = { "intelephense", "--stdio" },
+  on_new_config = function(new_config, _)
+    local custom_stubs = vim.fn.expand("~/.config/nvim/lsp/intelephense/stubs")
+    new_config.settings.stubFolderPath = custom_stubs
+  end,
+}
 
 local cmp = require('cmp')
 local cmp_select = {behavior = cmp.SelectBehavior.Select}
@@ -57,5 +65,5 @@ vim.diagnostic.config({
     width = 300
   },
 })
-vim.cmd [[autocmd CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=false})]]
 
+vim.cmd [[autocmd CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=false})]]
