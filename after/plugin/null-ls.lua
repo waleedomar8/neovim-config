@@ -3,7 +3,7 @@ local helpers = require('null-ls.helpers')
 
 local sources = {
 	null_ls.builtins.formatting.prettier.with({
-    filetypes =  {"css",  "html", "dart" ,  "json", "javascript", "javascriptreact" , "typescript" , "typescriptreact" , "html" , "php" , "go"}
+    filetypes =  {"css", "html", "dart" , "json", "javascript", "javascriptreact" , "typescript" , "typescriptreact" , "html" , "php" , "go"}
   })
 }
 local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
