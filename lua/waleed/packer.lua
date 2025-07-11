@@ -96,6 +96,19 @@ return require('packer').startup(function(use)
         require('Comment').setup()
     end
   }
+  use({
+  "CopilotC-Nvim/CopilotChat.nvim",
+  requires = {
+    { "github/copilot.vim" }, -- Or use "zbirenbaum/copilot.lua"
+    { "nvim-lua/plenary.nvim", branch = "master" },
+  },
+  run = "make tiktoken", -- Only on macOS or Linux
+  config = function()
+    require("CopilotChat").setup({
+      -- Add your config options here
+    })
+  end,
+})
   use {'romgrk/barbar.nvim', requires = 'nvim-web-devicons'}
   use("xiyaowong/transparent.nvim")
   use('aca/emmet-ls')
